@@ -1,0 +1,38 @@
+Public Class Form1
+    Private Sub PictureBox4_Click(sender As Object, e As EventArgs) Handles PictureBox4.Click
+
+    End Sub
+
+    Private Sub BtnEquipments_Click(sender As Object, e As EventArgs) Handles BtnEquipments.Click
+        Dim 
+    End Sub
+
+    Private Sub BtnContacts_Click(sender As Object, e As EventArgs) Handles BtnContacts.Click
+        Dim
+    End Sub
+
+    Private Sub BtnLocation_Click(sender As Object, e As EventArgs) Handles BtnLocation.Click
+        Dim
+    End Sub
+
+    Private Sub BtnComments_Click(sender As Object, e As EventArgs) Handles BtnComments.Click
+        Dim
+    End Sub
+
+    Private Sub BtnSerDate_Click(sender As Object, e As EventArgs) Handles BtnSerDate.Click
+        Dim
+    End Sub
+
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs) Handles TxtInputs.TextChanged
+        Dim 
+    End Sub
+
+    Private Sub BtnExit_Click(sender As Object, e As EventArgs) Handles BtnExit.Click
+
+        Dim frm As New Form1
+        frm.Show()
+
+        Me.Close()
+
+    End Sub
+End Class
