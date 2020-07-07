@@ -4,7 +4,28 @@ Public Class Form1
     End Sub
 
     Private Sub BtnEquipments_Click(sender As Object, e As EventArgs) Handles BtnEquipments.Click
-        Dim 
+               Dim parts As New OleDb.OleDbConnection("Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\jbimpa\
+Desktop\ Project \ Assets \ Assets \ ReliableApp.mdf;Integrated Security=True;Connect Timeout=30")
+
+        Try
+            parts().Open()
+
+            If parts.State = ConnectionState.Open Then
+                MsgBox("Equipments")
+            ElseIf
+                MsgBox("Description")
+            ElseIf 
+                MsgBox("Catagory")
+            Else
+                MsgBox("Not Connected")
+
+            End If
+        Catch Then ex As Exception
+            MsgBox(ex.Message)
+        Finally
+            parts.Close()
+        End Try
+
     End Sub
 
     Private Sub BtnContacts_Click(sender As Object, e As EventArgs) Handles BtnContacts.Click
