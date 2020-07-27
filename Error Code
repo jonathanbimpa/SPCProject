@@ -1,0 +1,32 @@
+ Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim conn As New SqlConnection
+
+        conn.ConnectionString = ("Data Source=DESKTOP-ST7R0V6\TEW_SQLEXPRESS;Initial Catalog=Spc Assets list;Integrated Security=True;Pooling=False")
+
+        conn.Open()
+
+        Dim strsql As String
+
+        strsql = "select Id, partnumber, description, catagory, price from SpcPartsInformation where id= '" + TextBox1.Text + "' "
+
+        Dim cmd As New SqlCommand(strsql)
+
+        Dim myreader As SqlDataReader
+        myreader = cmd.ExecuteReader
+
+        myreader.Read()
+
+        TextBox2.Text = myreader("Id")
+
+        TextBox3.Text = myreader("partnumber")
+
+        TextBox4.Text = myreader("description")
+
+        TextBox5.Text = myreader("catagory")
+
+        TextBox6.Text = myreader("price")
+
+        conn.Close()
+
+    End Sub
